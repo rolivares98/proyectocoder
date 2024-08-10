@@ -7,18 +7,27 @@
 header {
     background-color: #46020b;
     padding: 10px 20px;
+    position: fixed; /* Mantiene el navbar fijo en la parte superior */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el navbar esté sobre otros contenidos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra para destacar */
 }
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
+/* LOGO */
 .logo-container {
     flex: 1;
 }
 .logo {
     height: 100px; /* tamaño de la imagen */
 }
+/* BUSCAR */
 #searchForm {
     flex: 2;
     display: flex;
@@ -32,6 +41,7 @@ nav {
     padding: 5px 10px;
     font-size: 16px;
 }
+/* LINKS DEL NAVBAR */
 .nav-links {
     flex: 3;
     display: flex;
@@ -50,11 +60,12 @@ nav {
 .nav-links a:hover {
     color: #007bff;
 }
+
 /* MAIN */
 main {
-    padding: 20px;
+    padding: 100px;
 }
-/* INICIO */
+/* SECCION INICIO */
 #inicio {
     padding: 20px 0;
 }
@@ -76,7 +87,7 @@ main {
     font-size: 16px;
     line-height: 1.5;
 }
-/* FECHAS */
+/* FECHAS Y CARDS */
 #fechas {
     padding: 20px 0;
 }
@@ -189,4 +200,58 @@ main {
     margin: 0;
     color: #666;
 }
-/*    */
+/* PANTALLAS PEQUEÑAS    */
+@media (max-width: 768px) {
+    .nav-links {
+        flex: 1;
+        order: 1; /* Asegura que el menú se mueva debajo del logo en pantallas pequeñas */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+    }
+
+    .nav-links.active ul {
+        display: flex; /* Muestra el menú cuando el navbar está activado */
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Añadir un botón para mostrar el menú en pantallas pequeñas */
+    .nav-toggle {
+        display: block;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+}
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Ocultar links inicialmente en pantallas pequeñas */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar links cuando se active el botón de menú */
+    }
+}
