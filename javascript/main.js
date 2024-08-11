@@ -33,3 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('active');
     });
 });
+function showImage(src) {
+    document.getElementById('lightboxImage').src = src;
+}

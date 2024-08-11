@@ -260,3 +260,58 @@ main {
         display: flex; /* Mostrar links cuando se active el botón de menú */
     }
 }
+/* SECCION IGLESIA */
+.carousel-inner img {
+    max-height: 600px;
+    object-fit: cover;
+}
+
+/* SECCION MAPA */
+
+#localizacion {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+}
+
+#localizacion h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+#localizacion p {
+    font-size: 16px;
+    color: #666;
+}
+
+#localizacion a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#localizacion a:hover {
+    text-decoration: underline;
+}
+
+#localizacion .row {
+    margin-top: 20px;
+}
+
+#localizacion iframe {
+    border-radius: 8px;
+}
+/* FOOTER */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff; /* Enlaces en blanco */
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+footer a:hover {
+    color: #007bff; /* Enlaces en azul al pasar el ratón */
+}
