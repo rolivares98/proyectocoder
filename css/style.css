@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 /* HEADER Y NAV */
 header {
     background-color: #46020b;
@@ -207,6 +211,13 @@ main {
 }
 /* PANTALLAS PEQUEÑAS    */
 @media (max-width: 768px) {
+    .inicio-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .inicio-content img {
+        max-width: 100%;
+    }
     .nav-links {
         flex: 1;
         order: 1; /* Asegura que el menú se mueva debajo del logo en pantallas pequeñas */
@@ -297,7 +308,25 @@ main {
 }
 
 #localizacion iframe {
+    width: 100%;               /* Asegura que el mapa ocupe todo el ancho disponible */
+    height: auto;              /* Ajusta la altura automáticamente */
+    max-height: 400px;
     border-radius: 8px;
+}
+@media (max-width: 768px) {
+    #localizacion {
+        padding: 20px 10px;    /* Reduce el padding en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    #localizacion iframe {
+        max-height: 300px;     /* Reduce la altura del mapa en pantallas más pequeñas */
+    }
+
+    #localizacion h2 {
+        font-size: 24px;       /* Ajusta el tamaño del texto para pantallas pequeñas */
+    }
 }
 /* FOOTER */
 footer {
@@ -314,4 +343,27 @@ footer a {
 
 footer a:hover {
     color: #007bff; /* Enlaces en azul al pasar el ratón */
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 5px 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 80px 10px;
+    }
+
+    .card {
+        padding: 10px;
+        width: calc(100% - 20px);
+    }
 }
