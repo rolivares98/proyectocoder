@@ -1,12 +1,12 @@
 header {
-    background-color: #46020b;
-    padding: 10px 20px;
+    background-color: $primary-color;  //variable remplaza al color
+    padding: $padding-medium $padding-large;
     position: fixed; /* dejar navbar estatico */
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000; /* navbar sobre todas las ssecciones */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: $box-shadow; 
 }
 nav {
     display: flex;
@@ -32,30 +32,28 @@ nav {
 }
 #searchInput {
     flex-grow: 1;
-    padding: 5px;
-    font-size: 16px;
+    padding: $padding-small;
+    font-size: $font-size-base;
 }
 #searchForm button {
-    padding: 5px 10px;
-    font-size: 16px;
+    padding: $padding-small $padding-medium;
+    font-size: $font-size-base;
 }
+
 .nav-links {
-    flex: 3;
-    display: flex;
-    justify-content: flex-end;
-}
-.nav-links ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-}
-.nav-links a:hover {
-    color: #007bff;
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: $white-color;
+        font-size: $font-size-base;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
 }
 /* Estilos para pantallas pequeñas */
 .nav-toggle {
@@ -65,12 +63,12 @@ nav {
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
-        background-color: #46020b;
-        color: #fff;
+        background-color: $primary-color;
+        color: $white-color;
         border: none;
-        padding: 10px;
+        padding: $padding-medium;
         cursor: pointer;
-        font-size: 18px;
+        font-size: $font-size-large;
     }
 
     .nav-links {
