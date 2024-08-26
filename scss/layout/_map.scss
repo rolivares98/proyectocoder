@@ -1,0 +1,49 @@
+#localizacion {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+}
+
+#localizacion h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+#localizacion p {
+    font-size: 16px;
+    color: #666;
+}
+
+#localizacion a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#localizacion a:hover {
+    text-decoration: underline;
+}
+
+#localizacion .row {
+    margin-top: 20px;
+}
+
+#localizacion iframe {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    #localizacion {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #localizacion iframe {
+        max-height: 300px;
+    }
+    #localizacion h2 {
+        font-size: 24px;
+    }
+}

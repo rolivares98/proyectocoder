@@ -1,0 +1,85 @@
+header {
+    background-color: #46020b;
+    padding: 10px 20px;
+    position: fixed; /* dejar navbar estatico */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* navbar sobre todas las ssecciones */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+/* LOGO */
+.logo-container {
+    flex-shrink: 0;
+}
+.logo {
+    height: 100px; /* tamaño */
+    width: auto;
+    max-width: 120px;
+}
+/* BUSCAR */
+#searchForm {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+}
+#searchInput {
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 16px;
+}
+#searchForm button {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.nav-links {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+.nav-links a:hover {
+    color: #007bff;
+}
+/* Estilos para pantallas pequeñas */
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        background-color: #46020b;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
