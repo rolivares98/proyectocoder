@@ -1,83 +1,91 @@
 header {
-    background-color: $primary-color;  //variable remplaza al color
+    background-color: $primary-color;
     padding: $padding-medium $padding-large;
-    position: fixed; /* dejar navbar estatico */
+    position: fixed; 
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* navbar sobre todas las ssecciones */
-    box-shadow: $box-shadow; 
-}
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-}
-/* LOGO */
-.logo-container {
-    flex-shrink: 0;
-}
-.logo {
-    height: 100px; /* tamaño */
-    width: auto;
-    max-width: 120px;
-}
-/* BUSCAR */
-#searchForm {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    max-width: 300px;
-}
-#searchInput {
-    flex-grow: 1;
-    padding: $padding-small;
-    font-size: $font-size-base;
-}
-#searchForm button {
-    padding: $padding-small $padding-medium;
-    font-size: $font-size-base;
-}
+    z-index: 1000;
+    box-shadow: $box-shadow;
 
-.nav-links {
-    ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-    }
-    a{
-        text-decoration: none;
-        color: $white-color;
-        font-size: $font-size-base;
-        &:hover {
-            color: $secondary-color;
+    nav {
+        @include flex-container(center, space-between);
+        flex-wrap: wrap;
+
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo {
+            height: 100px;
+            width: auto;
+            max-width: 120px;
+        }
+
+        #searchForm {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            max-width: 300px;
+
+            #searchInput {
+                flex-grow: 1;
+                padding: $padding-small;
+                font-size: $font-size-base;
+            }
+
+            button {
+                padding: $padding-small $padding-medium;
+                font-size: $font-size-base;
+            }
+        }
+
+        .nav-links {
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+            }
+            
+            a {
+                text-decoration: none;
+                color: $white-color;
+                font-size: $font-size-base;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        .nav-toggle {
+            display: none;
         }
     }
 }
-/* Estilos para pantallas pequeñas */
-.nav-toggle {
-    display: none;
-}
 
 @media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-        background-color: $primary-color;
-        color: $white-color;
-        border: none;
-        padding: $padding-medium;
-        cursor: pointer;
-        font-size: $font-size-large;
-    }
+    header {
+        nav {
+            .nav-toggle {
+                display: block;
+                background-color: $primary-color;
+                color: $white-color;
+                border: none;
+                padding: $padding-medium;
+                cursor: pointer;
+                font-size: $font-size-large;
+            }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-    }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
 
-    .nav-links.active {
-        display: flex;
+                &.active {
+                    display: flex;
+                }
+            }
+        }
     }
 }

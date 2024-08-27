@@ -2,17 +2,16 @@ footer {
     background-color: #000;
     color: $white-color;
     padding: $padding-large 0;
+    a {
+        color: $white-color;
+        text-decoration: none;
+        margin-right: 15px;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
 }
 
-footer a {
-    color: $white-color;
-    text-decoration: none;
-    margin-right: 15px;
-}
-
-footer a:hover {
-    color: $secondary-color;
-}
 
 @media (max-width: 480px) {
     body {
