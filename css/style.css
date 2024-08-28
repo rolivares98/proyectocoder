@@ -1,18 +1,285 @@
-/* Error: Undefined mixin.
- *    ,
- * 12 |         @include flex-container(center, space-between);
- *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   scss\components\_navbar.scss 12:9  @import
- *   scss\style.scss 4:9                root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 12 \2502          @include flex-container(center, space-between);\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\components\\_navbar.scss 12:9  @import\a   scss\\style.scss 4:9                root stylesheet";
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  background-color: #46020b;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header nav .logo-container {
+  flex-shrink: 0;
+}
+header nav .logo {
+  height: 100px;
+  width: auto;
+  max-width: 120px;
+}
+header nav #searchForm {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+}
+header nav #searchForm #searchInput {
+  flex-grow: 1;
+  padding: 5px;
+  font-size: 16px;
+}
+header nav #searchForm button {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+header nav .nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+header nav .nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+header nav .nav-links a:hover {
+  color: #007bff;
+}
+header nav .nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header nav .nav-toggle {
+    display: block;
+    background-color: #46020b;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  header nav .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+  header nav .nav-links.active {
+    display: flex;
+  }
+}
+#fechas {
+  padding: 80px 0;
+}
+#fechas h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#fechas .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+#fechas .card-container .card {
+  background-color: #46020b;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 0.8s ease-in-out 0s forwards;
+}
+#fechas .card-container .card:nth-child(2) {
+  animation: fadeInScale 0.8s ease-in-out 0.2s forwards;
+}
+#fechas .card-container .card:nth-child(3) {
+  animation: fadeInScale 0.8s ease-in-out 0.4s forwards;
+}
+#fechas .card-container .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#fechas .card-container .card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 15px;
+}
+#fechas .card-container .card h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+#fechas .card-container .card p {
+  margin: 0;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% - 20px);
+  }
+}
+.carousel-inner {
+  height: 800px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #000;
+  color: #ffffff;
+  padding: 20px 0;
+}
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+footer a:hover {
+  color: #007bff;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  header {
+    padding: 5px 10px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+  main {
+    padding: 80px 10px;
+  }
+  .card {
+    padding: 10px;
+    width: calc(100% - 20px);
+  }
+}
+main {
+  padding: 100px;
+}
+main #inicio {
+  padding: 20px 0;
+}
+main #inicio h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+main #inicio .inicio-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+}
+main #inicio .inicio-content img {
+  max-width: 50%;
+  height: auto;
+}
+main #inicio .inicio-content article {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .inicio-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inicio-content img {
+    max-width: 100%;
+  }
+}
+#localizacion {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+}
+#localizacion h2 {
+  color: #333;
+  font-size: 28px;
+}
+#localizacion p {
+  font-size: 16px;
+  color: #666;
+}
+#localizacion a {
+  color: #007bff;
+  text-decoration: none;
+}
+#localizacion a:hover {
+  text-decoration: underline;
+}
+#localizacion .row {
+  margin-top: 20px;
+}
+#localizacion iframe {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  #localizacion {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 480px) {
+  #localizacion iframe {
+    max-height: 300px;
+  }
+  #localizacion h2 {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -4,3 +4,17 @@
     justify-content: $justify;
     flex-direction: $direction;
 }
+// mixin de las cards
+@mixin fade-in-scale($duration, $delay: 0s){
+    animation: fadeInScale $duration ease-in-out $delay forwards;
+}
+@keyframes fadeInScale {
+    from{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
