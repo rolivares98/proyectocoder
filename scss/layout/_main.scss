@@ -1,38 +1,56 @@
-main {
-    padding: 100px;
+#inicio {
+    padding: 100px 0;
 
-    #inicio {
-        padding: 20px 0;
+    .carousel-container {
+        max-width: 100%;  // Ancho máximo del contenedor del carrusel
+        max-height: 400px; // Ajusta la altura máxima del contenedor
+        margin: 0 auto 20px auto;
+        overflow: hidden; // Oculta el contenido que se desborda
+    }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
+    .carousel-inner {
+        max-height: 400px; // Limita la altura del contenido del carrusel
+    }
+
+    .carousel-item {
+        max-height: 400px; // Limita la altura de cada elemento del carrusel
+        img {
+            max-height: 400px; // Limita la altura de las imágenes dentro del carrusel
+            object-fit: cover; // Asegura que las imágenes no se deformen
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        max-height: 400px; // Limita la altura de los controles del carrusel
+    }
+
+    .carousel-indicators {
+        bottom: 10px; // Ajusta la posición de los indicadores para que no queden fuera del área visible
+    }
+
+    .text-container {
+        max-width: 70%;
+        max-height: 400px; // Ajusta la altura máxima del contenedor de texto
+        margin: 0 auto;
+    }
+
+    .inicio-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-container,
+        .text-container {
+            max-width: 100%;
+            max-height: 300px; // Reducir la altura en pantallas pequeñas
         }
 
         .inicio-content {
-            @include flex-container(flex-start, space-between);
-            gap: 20px;
-
-            img {
-                max-width: 50%;
-                height: auto;
-            }
-
-            article {
-                flex: 1;
-                font-size: 16px;
-                line-height: 1.5;
-            }
+            flex-direction: column;
+            align-items: center;
         }
-    }
-}
-
-@media (max-width: 768px) {
-    .inicio-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    .inicio-content img {
-        max-width: 100%;
     }
 }
