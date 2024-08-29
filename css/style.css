@@ -117,7 +117,7 @@ header nav .nav-toggle {
   width: calc(33.333% - 20px);
   box-sizing: border-box;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.5s, box-shadow 0.5s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,7 +132,7 @@ header nav .nav-toggle {
   animation: fadeInScale 0.8s ease-in-out 0.4s forwards;
 }
 #fechas .card-container .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-20px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 #fechas .card-container .card img {
@@ -157,8 +157,16 @@ header nav .nav-toggle {
   }
 }
 @media (max-width: 480px) {
-  .card {
+  .card-container .card {
     width: calc(100% - 20px);
+    margin-bottom: 20px;
+  }
+  .card img {
+    height: auto;
+  }
+  .card h3, .card p {
+    font-size: 16px;
+    text-align: center;
   }
 }
 .carousel-inner {
