@@ -38,45 +38,41 @@
 
     <main>
         <section id="inicio" class="container my-5">
+            <h1 class="mb-4">LAONZANA</h1>
             <div class="row">
-                <div class="col-md-6 carousel-container">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
+                <div class="col-md-6">
+                    <div id="iglesiaCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="imagenes/laonzana pueblo.jpg" class="d-block w-100" alt="Vista del pueblo" />
+                                <img src="imagenes/pueblo/laonzana-pueblo 500.webp" class="d-block w-100"
+                                    alt="Imagen de la iglesia antes del terremoto" />
                             </div>
                             <div class="carousel-item">
-                                <img src="imagenes/pueblo/paisaje pueblo2500.webp" class="d-block w-100" alt="Vista 2 del pueblo" />
+                                <img src="imagenes/pueblo/paisaje pueblo2500.webp" class="d-block w-100"
+                                    alt="Imagen de la iglesia antes del terremoto" />
                             </div>
                             <div class="carousel-item">
-                                <img src="imagenes/pueblo/paisaje_pueblo3500.webp" class="d-block w-100" alt="Vista 3 del pueblo" />
+                                <img src="imagenes/pueblo/paisaje_pueblo3500.webp" class="d-block w-100"
+                                    alt="Imagen de la inaguracion de la nueva iglesia" />
                             </div>
                             <div class="carousel-item">
-                                <img src="imagenes/pueblo/paisaje_pueblo4500.webp" class="d-block w-100" alt="Vista 4 del pueblo" />
+                                <img src="imagenes/pueblo/paisaje_pueblo4500.webp" class="d-block w-100"
+                                    alt="Imagen del interior de la nueva iglesia" />
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#iglesiaCarousel"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        <button class="carousel-control-next" type="button" data-bs-target="#iglesiaCarousel"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
                 </div>
-                <div class="col-md-6 text-container">
-                    <h1 class="mb-4">LAONZANA</h1>
+                <div class="col-md-6">
                     <article>
                         <p>
                             Laonzana es un pueblo ubicado en la quebrada de Tarapacá, aproximadamente a 117 Km de la ciudad de Iquique y a unos 1500 metros sobre el nivel del mar. Su conformación urbana se relaciona con la estrecha franja de terrenos que sus habitantes dedican a los trabajos de huertos agrícolas y que comercializan en el mercado agrícola de la ciudad de Iquique. Su Iglesia es Monumento Nacional y conserva en su portada talla menor de estilo barroco andino.
@@ -202,12 +198,20 @@
         </section>
 
         <section id="localizacion">
-            <h2>LOCALIZACION EN EL MAPA</h2>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3752.57837727846!2d-69.34730034077205!3d-19.85778501884744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1720132783616!5m2!1ses-419!2scl"
-                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <!--ver si se puede añadir una ruta-->
+            <h2>LOCALIZACIÓN EN EL MAPA</h2>
+            <div class="map-container">
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Puedes conocer este lugar a traves de la quebrada de Tarapacá siguiendo la</p>
+                    <p>Ruta A-545, Laonzana, Huara, Tarapacá</p>
+                </div>
+                <div class="map-embed">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3752.57837727846!2d-69.34730034077205!3d-19.85778501884744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1720132783616!5m2!1ses-419!2scl"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
         </section>
     </main>
     <footer id="contacto" class="bg-dark text-light py-4">

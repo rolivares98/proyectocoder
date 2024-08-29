@@ -1,6 +1,6 @@
 
 #fechas {
-    padding: 80px 0;
+    padding-top: 20px;
     h2 {
         text-align: center;
         margin-bottom: 40px;
@@ -17,7 +17,7 @@
             border-radius: $border-radius;
             box-shadow: $box-shadow;
             padding: $padding-large;
-            width: calc(33.333% - 20px);
+            width: calc(33% - 20px);
             box-sizing: border-box;
             text-align: center;
             transition: transform 0.5s, box-shadow 0.5s;
@@ -62,20 +62,20 @@
 //dos columnas para pantallas medianas
 @media (max-width: 768px) {
     .card {
-        width: calc(50% - 20px);
+        width: calc(50% - 20px) !important; 
     }
 }
 //una columna pantalla pequeña y margen entre cards
 @media (max-width: 480px) {  
     .card-container .card {
-        width: calc(100% - 20px);
+        width: calc(100% - 20px) !important;
         margin-bottom: 20px;
     }
     .card img {
-        height: auto;
+        height: auto !important;
     }
     .card h3, .card p {
-        font-size: $font-size-base;
-        text-align: center;
+        font-size: $font-size-base !important;
+        text-align: center !important;
     }
 }
