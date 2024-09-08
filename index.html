@@ -14,16 +14,17 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="logo-container">
                 <img src="imagenes/logo laonzana.jpg" alt="logo del pueblo" class="logo" />
             </div>
-            <button class="nav-toggle">☰</button>
-            <!-- Botón hamburguesa -->
-            <form id="searchForm" action="/buscar" method="get">
+            <button class="nav-toggle">☰</button> <!-- Botón hamburguesa para móviles -->
+            
+            <form id="searchForm" action="/buscar" method="get" class="search-bar">
                 <input type="text" id="searchInput" name="q" placeholder="Buscar..." />
                 <button type="submit">Buscar</button>
             </form>
+            
             <div class="nav-links">
                 <ul>
                     <li><a href="#inicio">INICIO</a></li>
@@ -36,7 +37,6 @@
             </div>
         </nav>
     </header>
-
     <main>
         <section id="inicio" class="container my-5">
             <h1 class="mb-4">LAONZANA</h1>
@@ -134,38 +134,17 @@
 
         <section id="iglesia" class="container my-5">
             <div class="row">
+                <!-- Galería de imágenes -->
                 <div class="col-md-6">
-                    <div id="iglesiaCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="imagenes/iglesia_antigua500.jpg" class="d-block w-100"
-                                    alt="Imagen de la iglesia antes del terremoto" />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="imagenes/IGLESIA_antigua2500.jpg" class="d-block w-100"
-                                    alt="Imagen de la iglesia antes del terremoto" />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="imagenes/Iglesia_inaguracion3500.jpg" class="d-block w-100"
-                                    alt="Imagen de la inaguracion de la nueva iglesia" />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="imagenes/iglesia_dentro4500.jpg" class="d-block w-100"
-                                    alt="Imagen del interior de la nueva iglesia" />
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#iglesiaCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#iglesiaCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                    <div class="gallery">
+                        <img src="imagenes/iglesia_antigua500.jpg" class="thumbnail" alt="Imagen de la iglesia antes del terremoto"  />
+                        <img src="imagenes/IGLESIA_antigua2500.jpg" class="thumbnail" alt="Imagen de la iglesia antes del terremoto" />
+                        <img src="imagenes/Iglesia_inaguracion3500.jpg" class="thumbnail" alt="Imagen de la inaguracion de la nueva iglesia"  />
+                        <img src="imagenes/iglesia_dentro4500.jpg" class="thumbnail" alt="Imagen del interior de la nueva iglesia" />
                     </div>
                 </div>
+        
+                <!-- Texto descriptivo -->
                 <div class="col-md-6">
                     <article>
                         <h2>IGLESIA DE LAONZANA</h2>
@@ -197,6 +176,12 @@
                 </div>
             </div>
         </section>
+
+        <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
 
         <section id="localizacion">
             <h2>LOCALIZACIÓN EN EL MAPA</h2>
@@ -233,6 +218,7 @@
             </div>
         </div>
     </footer>
+    <script src="path/to/bootstrap.min.js"></script>
     <script src="javascript/main.js"></script>
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

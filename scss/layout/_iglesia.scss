@@ -1,0 +1,39 @@
+#iglesia {
+    padding: 40px 20px;
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .thumbnail {
+            width: 48%;
+            cursor: pointer;
+            border-radius: $border-radius;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    article {
+        h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        p {
+            font-size: $font-size-base;
+            color: #666;
+            line-height: 1.5;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .gallery .thumbnail {
+            width: 100%;
+        }
+    }
+}
