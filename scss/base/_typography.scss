@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Establecer variables para las fuentes
+$font-text: 'Roboto', sans-serif;
+$font-title: 'Kanit', serif;
+
+// Aplicar las fuentes a los títulos (h1, h2, h3, etc.)
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+}
+
+// Aplicar la fuente general al cuerpo del documento
+body {
+  font-family: $font-text;
+}
