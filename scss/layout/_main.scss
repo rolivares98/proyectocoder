@@ -1,7 +1,9 @@
 #inicio {
-    padding-top: 100px;
+
     h1 {
         text-align: center;
+        padding-top: 80px;
+        padding-bottom: 20px;
     }
 
     .carousel-container {
@@ -12,7 +14,8 @@
     }
 
     .carousel-inner {
-        max-height: 400px; // Limita la altura del contenido del carrusel
+        max-height: 320px; // Limita la altura del contenido del carrusel
+        border-radius: $border-radius;
     }
 
     .carousel-item {
@@ -31,6 +34,25 @@
     .carousel-indicators {
         bottom: 10px; // Ajusta la posición de los indicadores para que no queden fuera del área visible
     }
+    .carousel-thumbnails {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+        img {
+            width: 80px;
+            height: 50px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            cursor: pointer;
+            &:hover {
+                border-color: $primary-color;
+            }
+            &.active {
+                border-color: $primary-color;
+            }
+        }
+    }
 
     .text-container {
         max-width: 70%;
@@ -43,27 +65,12 @@
         align-items: flex-start;
         gap: 20px;
     }
-    @media (max-width: 480px) {
-        .carousel-container,
-        .text-container {
-            max-width: 100%;
-            max-height: 300px; // Reducir la altura en pantallas pequeñas
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-
-        .inicio-content {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
     
-
     @media (max-width: 768px) {
         .carousel-container,
         .text-container {
             max-width: 100%;
-            max-height: 300px; // Reducir la altura en pantallas pequeñas
+            max-height: 320px; // Reducir la altura en pantallas pequeñas
             margin-left: 10px;
             margin-right: 10px;
         }
@@ -74,4 +81,19 @@
         }
     }
 }
+@media (max-width: 480px) {
+    .carousel-container,
+    .text-container {
+        max-width: 100%;
+        max-height: 320px; // Reducir la altura en pantallas pequeñas
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .inicio-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 

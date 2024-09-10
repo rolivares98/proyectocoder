@@ -1,5 +1,11 @@
 #iglesia {
     padding: 40px 20px;
+    h2 {
+        font-size: 2rem;
+        color: #333;
+        text-align: center;
+        padding-bottom: 20px;
+    }
 
     .gallery {
         display: flex;
@@ -19,11 +25,7 @@
     }
 
     article {
-        h2 {
-            font-size: 2rem;
-            color: #333;
-        }
-
+        padding-top: 20px;
         p {
             font-size: $font-size-base;
             color: #666;

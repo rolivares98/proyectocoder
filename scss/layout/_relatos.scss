@@ -1,6 +1,9 @@
 #historias {
     padding: 60px 0;
 }
+#historias p {
+    text-align: center;
+}
 
 #historias h2 {
     text-align: center;
@@ -68,3 +71,17 @@
     margin: 0;
     color: #666;
 }
+
+@media (max-width: 768px) {
+    #historias {
+        padding: 20px 10px;
+    }
+}
+@media (max-width: 480px) {
+    #historias {
+        padding: 20px 10px;
+    }
+}
+
+
+
